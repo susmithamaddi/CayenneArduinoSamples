@@ -9,22 +9,22 @@ diode (eg. 1N4001), and a 270 ohm resistor.
 
 Steps:
 1. In the Cayenne Dashboard add a Button using Custom Widget.
-2. Select a virtual channel number.
-3. Set VIRTUAL_CHANNEL to the channel number you selected.
+2. Select a virtual pin number.
+3. Set VIRTUAL_PIN to the pin number you selected.
 4. Set up your motor schematic and attach it to a PWM pin.
 5. Set the motorPin variable to the PWM pin number you selected.
 6. Set the token variable to match the Arduino token from the Dashboard.
 7. Compile and upload this sketch.
 8. Once the Arduino connects to the Dashboard you can toggle the Motor switch.
 
-We use the virtual channel to receive data from the dashboard to enable and disable the motor.
+We use the virtual pin to receive data from the dashboard to enable and disable the motor.
 */
 
 #define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space
 #include <CayenneEthernet.h>
 
-// Virtual Channel of the widget.
-#define VIRTUAL_CHANNEL V1
+// Virtual Pin of the widget.
+#define VIRTUAL_PIN V1
 
 // Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
 char token[] = "AuthenticationToken";
@@ -38,8 +38,8 @@ void setup()
 	Cayenne.begin(token);
 }
 
-//Enable or disable the motor based on value received on virtual channel.
-CAYENNE_IN(VIRTUAL_CHANNEL)
+//Enable or disable the motor based on value received on virtual pin.
+CAYENNE_IN(VIRTUAL_PIN)
 {
   int speed = 155;
   // read the integer value which should be 0 or 1

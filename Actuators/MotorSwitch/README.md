@@ -8,15 +8,15 @@ the DC motor. To keep it simple, the we will need a **transistor (PN2222)**,
 
 ###### Steps:
 1. In the Cayenne Dashboard add a Button using Custom Widget.
-2. Select a virtual channel number.
-3. Set VIRTUAL_CHANNEL to the channel number you selected.
+2. Select a virtual pin number.
+3. Set VIRTUAL_PIN to the pin number you selected.
 4. Set up your motor schematic and attach it to a PWM pin.
 5. Set the motorPin variable to the PWM pin number you selected.
 6. Set the token variable to match the Arduino token from the Dashboard.
 7. Compile and upload this sketch.
 8. Once the Arduino connects to the Dashboard you can toggle the Motor switch.
 
-We use the virtual channel to receive data from the dashboard to enable and disable the motor.
+We use the virtual pin to receive data from the dashboard to enable and disable the motor.
 
 ## Example Schematic
 https://cdn-learn.adafruit.com/assets/assets/000/002/346/medium640/learn_arduino_breadboard.jpg?1396782072

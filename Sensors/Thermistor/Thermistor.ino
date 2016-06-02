@@ -6,8 +6,8 @@ This sketch shows how to send temperature data to a Thermistor Sensor in the Cay
 Steps:
 1. In the Cayenne Dashboard add a new Thermistor widget.
 2. Set the widget to Value Display.
-3. Select Virtual Pins and a virtual channel number.
-4. Set VIRTUAL_CHANNEL to the channel number you selected.
+3. Select Virtual Pins and a virtual pin number.
+4. Set VIRTUAL_PIN to the pin number you selected.
 5. Attach a thermistor to an analog pin on your Arduino. Make sure to use an analog pin, not a digital pin.
    Schematic:
    [Ground] -- [10k-resistor] -- | -- [Thermistor] -- [5V]
@@ -26,8 +26,8 @@ Steps:
 // Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
 char token[] = "AuthenticationToken";
 
-// Virtual Channel of the Thermistor widget.
-#define VIRTUAL_CHANNEL V1
+// Virtual Pin of the Thermistor widget.
+#define VIRTUAL_PIN V1
 
 // Analog pin the thermistor is connected to.
 const int thermistorPin = 0;
@@ -49,12 +49,12 @@ void loop()
 	Cayenne.run();
 }
 
-// This function is called when the Cayenne widget requests data for the Virtual Channel.
-CAYENNE_OUT(VIRTUAL_CHANNEL)
+// This function is called when the Cayenne widget requests data for the Virtual Pin.
+CAYENNE_OUT(VIRTUAL_PIN)
 {
-	// This command writes the temperature in Celsius to the Virtual Channel.
-	Cayenne.celsiusWrite(VIRTUAL_CHANNEL, thermistor.getCelsius());
+	// This command writes the temperature in Celsius to the Virtual Pin.
+	Cayenne.celsiusWrite(VIRTUAL_PIN, thermistor.getCelsius());
 	// To send the temperature in Fahrenheit or Kelvin use the corresponding code below.
-	//Cayenne.fahrenheitWrite(VIRTUAL_CHANNEL, thermistor.getFahrenheit());
-	//Cayenne.kelvinWrite(VIRTUAL_CHANNEL, thermistor.getKelvin());
+	//Cayenne.fahrenheitWrite(VIRTUAL_PIN, thermistor.getFahrenheit());
+	//Cayenne.kelvinWrite(VIRTUAL_PIN, thermistor.getKelvin());
 }

@@ -6,8 +6,8 @@ This sketch shows how to send temperature data to a TMP102 Sensor in the Cayenne
 Steps:
 1. In the Cayenne Dashboard add a new TMP102 widget.
 2. Set the widget to Value Display.
-3. Select Virtual Pins and a virtual channel number.
-4. Set VIRTUAL_CHANNEL to the channel number you selected.
+3. Select Virtual Pins and a virtual pin number.
+4. Set VIRTUAL_PIN to the pin number you selected.
 5. Attach a TMP102 to your Arduino.
    Schematic:
    TMP102    Arduino
@@ -29,8 +29,8 @@ Steps:
 // Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
 char token[] = "AuthenticationToken";
 
-// Virtual Channel of the TMP102 widget.
-#define VIRTUAL_CHANNEL V1
+// Virtual Pin of the TMP102 widget.
+#define VIRTUAL_PIN V1
 
 // Address used to read from the TMP102. This is determined by the ADD0 pin on the TMP102.
 // Connecting it to ground means the sensor will use 0x48 for the address.  See the TMP102 datasheet for more info.
@@ -50,12 +50,12 @@ void loop()
 	Cayenne.run();
 }
 
-// This function is called when the Cayenne widget requests data for the Virtual Channel.
-CAYENNE_OUT(VIRTUAL_CHANNEL)
+// This function is called when the Cayenne widget requests data for the Virtual Pin.
+CAYENNE_OUT(VIRTUAL_PIN)
 {
-	// This command writes the temperature in Celsius to the Virtual Channel.
-	Cayenne.celsiusWrite(VIRTUAL_CHANNEL, tmpSensor.getCelsius());
+	// This command writes the temperature in Celsius to the Virtual Pin.
+	Cayenne.celsiusWrite(VIRTUAL_PIN, tmpSensor.getCelsius());
 	// To send the temperature in Fahrenheit or Kelvin use the corresponding code below.
-	//Cayenne.fahrenheitWrite(VIRTUAL_CHANNEL, tmpSensor.getFahrenheit());
-	//Cayenne.kelvinWrite(VIRTUAL_CHANNEL, tmpSensor.getKelvin());
+	//Cayenne.fahrenheitWrite(VIRTUAL_PIN, tmpSensor.getFahrenheit());
+	//Cayenne.kelvinWrite(VIRTUAL_PIN, tmpSensor.getKelvin());
 }

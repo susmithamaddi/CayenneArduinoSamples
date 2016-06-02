@@ -8,8 +8,8 @@ Steps:
 2. Install the Adafruit TSL2561 library (https://github.com/adafruit/Adafruit_TSL2561) from the Arduino Library Manager.
 3. In the Cayenne Dashboard add a new TSL2561 widget.
 4. Set the widget to Value Display.
-5. Select Virtual Pins and a virtual channel number.
-6. Set VIRTUAL_CHANNEL to the channel number you selected.
+5. Select Virtual Pins and a virtual pin number.
+6. Set VIRTUAL_PIN to the pin number you selected.
 7. Attach a TSL2561 to your Arduino.
    Schematic:
    TSL2561    Arduino
@@ -31,8 +31,8 @@ Code adapted from Adafruit TSL2561 sensorapi example.
 #include <Adafruit_TSL2561_U.h>
 #include <CayenneEthernet.h>
 
-// Virtual Channel of the TSL2561 widget.
-#define VIRTUAL_CHANNEL V1
+// Virtual Pin of the TSL2561 widget.
+#define VIRTUAL_PIN V1
 
 // Address used to read from the TSL2561. This is determined by the ADDR pin on the TSL2561.
 // If ADDR is unconnected it means the sensor will use TSL2561_ADDR_FLOAT (0x39) for the address.  See the TSL2561 datasheet for more info.
@@ -65,8 +65,8 @@ void loop()
 	Cayenne.run();
 }
 
-// This function is called when the Cayenne widget requests data for the Virtual Channel.
-CAYENNE_OUT(VIRTUAL_CHANNEL)
+// This function is called when the Cayenne widget requests data for the Virtual Pin.
+CAYENNE_OUT(VIRTUAL_PIN)
 {
 	// Send the command to get luminosity.
 	sensors_event_t event;
@@ -75,7 +75,7 @@ CAYENNE_OUT(VIRTUAL_CHANNEL)
 	if (event.light)
 	{
 		// Send the value to Cayenne in lux.
-		Cayenne.luxWrite(VIRTUAL_CHANNEL, event.light);
+		Cayenne.luxWrite(VIRTUAL_PIN, event.light);
 	}
 	else
 	{

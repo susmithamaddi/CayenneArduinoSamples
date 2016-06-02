@@ -6,9 +6,9 @@ This sketch shows how to send luminosity data to a VCNL4000 Sensor in the Cayenn
 Steps:
 1. In the Cayenne Dashboard add a new VCNL4000 widget.
 2. Set the widget to Value Display.
-3. Select Virtual Pins and select virtual channels for the distance and luminosity.
-4. Set DISTANCE_CHANNEL to the channel number you selected for the distance.
-5. Set LUMINOSITY_CHANNEL to the channel number you selected for the luminosity.
+3. Select Virtual Pins and select virtual pins for the distance and luminosity.
+4. Set DISTANCE_PIN to the pin number you selected for the distance.
+5. Set LUMINOSITY_PIN to the pin number you selected for the luminosity.
 6. Attach a VCNL4000 to your Arduino.
    Schematic:
    VCNL4000    Arduino
@@ -26,9 +26,9 @@ Steps:
 #include <CayenneVCNL4000.h>
 #include <CayenneEthernet.h>
 
-// Virtual Channels of the VCNL4000 widget.
-#define DISTANCE_CHANNEL V1
-#define LUMINOSITY_CHANNEL V2
+// Virtual Pins of the VCNL4000 widget.
+#define DISTANCE_PIN V1
+#define LUMINOSITY_PIN V2
 
 VCNL4000 proximitySensor;
 
@@ -51,19 +51,19 @@ void loop()
 	Cayenne.run();
 }
 
-// This function is called when the Cayenne widget requests data for the distance Virtual Channel.
-CAYENNE_OUT(DISTANCE_CHANNEL)
+// This function is called when the Cayenne widget requests data for the distance Virtual Pin.
+CAYENNE_OUT(DISTANCE_PIN)
 {
 	//The getMillimeters() function only provides a rough estimate of distance. If greater accuracy is desired
 	//settings can be tweaked in CayenneVCNL400.h.
 	int distance = proximitySensor.getMillimeters();
 	if (distance != NO_PROXIMITY) {
-		Cayenne.virtualWrite(DISTANCE_CHANNEL, distance, MILLIMETERS, DISTANCE);
+		Cayenne.virtualWrite(DISTANCE_PIN, distance, MILLIMETERS, DISTANCE);
 	}
 }
 
-// This function is called when the Cayenne widget requests data for the luminosity Virtual Channel.
-CAYENNE_OUT(LUMINOSITY_CHANNEL)
+// This function is called when the Cayenne widget requests data for the luminosity Virtual Pin.
+CAYENNE_OUT(LUMINOSITY_PIN)
 {
-	Cayenne.luxWrite(LUMINOSITY_CHANNEL, proximitySensor.getLux());
+	Cayenne.luxWrite(LUMINOSITY_PIN, proximitySensor.getLux());
 }

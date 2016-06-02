@@ -8,9 +8,9 @@ Steps:
 2. Install the Adafruit BMP085 Unified library (https://github.com/adafruit/Adafruit_BMP085_Unified) from the Arduino Library Manager.
 3. In the Cayenne Dashboard add a new BMP180 widget.
 4. Set the widget to Value Display.
-5. Select Virtual Pins and select virtual channels for the barometer and temperature.
-6. Set BAROMETER_CHANNEL to the channel number you selected for the barometer.
-7. Set TEMPERATURE_CHANNEL to the channel number you selected for the temperature.
+5. Select Virtual Pins and select virtual pins for the barometer and temperature.
+6. Set BAROMETER_PIN to the pin number you selected for the barometer.
+7. Set TEMPERATURE_PIN to the pin number you selected for the temperature.
 8. Attach a BMP180 to your Arduino.
    Schematic:
    BMP180    Arduino
@@ -29,9 +29,9 @@ Steps:
 #include <Adafruit_BMP085_U.h>
 #include <CayenneEthernet.h>
 
-// Virtual Channels of the BMP180 widget.
-#define BAROMETER_CHANNEL V1
-#define TEMPERATURE_CHANNEL V2
+// Virtual Pins of the BMP180 widget.
+#define BAROMETER_PIN V1
+#define TEMPERATURE_PIN V2
 
 Adafruit_BMP085_Unified bmp = Adafruit_BMP085_Unified(10180);
 
@@ -54,8 +54,8 @@ void loop()
 	Cayenne.run();
 }
 
-// This function is called when the Cayenne widget requests data for the barometer's Virtual Channel.
-CAYENNE_OUT(BAROMETER_CHANNEL)
+// This function is called when the Cayenne widget requests data for the barometer's Virtual Pin.
+CAYENNE_OUT(BAROMETER_PIN)
 {
 	// Send the command to get data.
 	sensors_event_t event;
@@ -64,15 +64,15 @@ CAYENNE_OUT(BAROMETER_CHANNEL)
 	if (event.pressure)
 	{
 		// Send the value to Cayenne in hectopascals.
-		Cayenne.hectoPascalWrite(BAROMETER_CHANNEL, event.pressure);
+		Cayenne.hectoPascalWrite(BAROMETER_PIN, event.pressure);
 	}
 }
 
-// This function is called when the Cayenne widget requests data for the temperature's Virtual Channel.
-CAYENNE_OUT(TEMPERATURE_CHANNEL)
+// This function is called when the Cayenne widget requests data for the temperature's Virtual Pin.
+CAYENNE_OUT(TEMPERATURE_PIN)
 {
 	float temperature;
 	bmp.getTemperature(&temperature);
 	// Send the value to Cayenne in Celsius.
-	Cayenne.celsiusWrite(TEMPERATURE_CHANNEL, temperature);
+	Cayenne.celsiusWrite(TEMPERATURE_PIN, temperature);
 }

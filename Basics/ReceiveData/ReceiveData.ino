@@ -2,10 +2,10 @@
 Cayenne ReceiveData Example
 Adapted from Blynk's GetData Example
 
-This example sketch shows how a value can be sent from the Cayenne Dashboard to the Arduino on a Virtual Channel.
+This example sketch shows how a value can be sent from the Cayenne Dashboard to the Arduino on a Virtual Pin.
 
 Steps:
-1. Create a Generic Digital Output Actuator attached to Virtual Channel 4 in the Cayenne Dashboard.
+1. Create a Generic Digital Output Actuator attached to Virtual Pin 4 in the Cayenne Dashboard.
 2. Set the token variable to match the Arduino token from the Dashboard.
 3. Compile and upload the sketch.
 */

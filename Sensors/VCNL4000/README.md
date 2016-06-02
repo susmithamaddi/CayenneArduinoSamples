@@ -6,8 +6,8 @@ This sketch shows how to send luminosity data to a VCNL4000 Sensor in the Cayenn
 1. In the Cayenne Dashboard add a new VCNL4000 widget.
 2. Set the widget to Value Display.
 3. Select Virtual Pins and select virtual channels for the distance and luminosity.
-4. Set DISTANCE_CHANNEL to the channel number you selected for the distance.
-5. Set LUMINOSITY_CHANNEL to the channel number you selected for the luminosity.
+4. Set DISTANCE_PIN to the pin number you selected for the distance.
+5. Set LUMINOSITY_PIN to the pin number you selected for the luminosity.
 6. Attach a VCNL4000 to your Arduino.
    * Schematic:
    ```

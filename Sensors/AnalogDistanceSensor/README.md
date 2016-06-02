@@ -5,8 +5,8 @@ This sketch shows how to automatically send data to a Analog Distance Sensor in 
 ###### Steps:
 1. In the Cayenne Dashboard add a new Analog Distance Sensor widget.
 2. Set the widget to Value Display.
-3. Select the Integrated ADC and a channel number.
-4. Attach an analog distance sensor to the analog pin on your Arduino matching the selected channel.
+3. Select the Integrated ADC and a pin number.
+4. Attach an analog distance sensor to the analog pin on your Arduino matching the selected pin.
    Make sure to use an analog pin, not a digital pin.
    * Schematic:
    ```

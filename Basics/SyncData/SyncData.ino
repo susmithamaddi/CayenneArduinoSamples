@@ -2,10 +2,10 @@
 Cayenne SyncData Example
 Adapted from Blynk's GetData Example
 
-This example sketch shows how a value in the Cayenne Dashboard can be synced with the Arduino on a Virtual Channel.
+This example sketch shows how a value in the Cayenne Dashboard can be synced with the Arduino on a Virtual Pin.
 
 Steps:
-1. Create a Generic Digital Output Actuator widget attached to Virtual Channel 6 in the Cayenne Dashboard.
+1. Create a Generic Digital Output Actuator widget attached to Virtual Pin 6 in the Cayenne Dashboard.
 2. Set the token variable to match the Arduino token from the Dashboard.
 3. Compile and upload the sketch.
 
@@ -40,11 +40,11 @@ void loop()
 	timer.run(); // Initiates SimpleTimer
 }
 
-// This function syncs the Virtual Channel 6 data.
+// This function syncs the Virtual Pin 6 data.
 void syncData()
 {
 	CAYENNE_LOG("Sync data");
-	// Sync the Virtual Channel. This sends a request to the server to resend data for the channel.
+	// Sync the Virtual Pin. This sends a request to the server to resend data for the pin.
 	// This will cause the CAYENNE_IN function to be called.
 	Cayenne.syncVirtual(V6);
 }

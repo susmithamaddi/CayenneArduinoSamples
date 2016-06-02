@@ -6,9 +6,9 @@ This sketch connects to the Cayenne server using an Arduino Serial USB connectio
 and runs the main communication loop.
 
 For Cayenne Dashboard widgets using digital or analog pins this sketch will automatically
-send data on those pins to the Cayenne server. If the widgets use Virtual Channels, data
-should be sent to those channels using virtualWrites. Examples for sending and receiving
-Virtual Channel data are under the Basics folder.
+send data on those pins to the Cayenne server. If the widgets use Virtual Pins, data
+should be sent to those pins using virtualWrites. Examples for sending and receiving
+Virtual Pin data are under the Basics folder.
 
 This requires the use of the Serial USB connection so you cannot use the Serial device for
 printing messages. If you need to print you can use SoftwareSerial and connect another device

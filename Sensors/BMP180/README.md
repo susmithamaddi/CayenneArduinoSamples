@@ -8,8 +8,8 @@ This sketch shows how to send luminosity data to a BMP180 Sensor in the Cayenne 
 3. In the Cayenne Dashboard add a new BMP180 widget.
 4. Set the widget to Value Display.
 5. Select Virtual Pins and select virtual channels for the barometer and temperature.
-6. Set BAROMETER_CHANNEL to the channel number you selected for the barometer.
-7. Set TEMPERATURE_CHANNEL to the channel number you selected for the temperature.
+6. Set BAROMETER_PIN to the pin number you selected for the barometer.
+7. Set TEMPERATURE_PIN to the pin number you selected for the temperature.
 8. Attach a BMP180 to your Arduino.
    * Schematic:
    ```

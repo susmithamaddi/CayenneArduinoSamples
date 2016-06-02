@@ -7,8 +7,8 @@ This sketch shows how to send luminosity data to a TSL2561 Sensor in the Cayenne
 2. Install the Adafruit TSL2561 library (https://github.com/adafruit/Adafruit_TSL2561) from the Arduino Library Manager.
 3. In the Cayenne Dashboard add a new TSL2561 widget.
 4. Set the widget to Value Display.
-5. Select Virtual Pins and a virtual channel number.
-6. Set VIRTUAL_CHANNEL to the channel number you selected.
+5. Select Virtual Pins and a virtual pin number.
+6. Set VIRTUAL_PIN to the pin number you selected.
 7. Attach a TSL2561 to your Arduino.
    * Schematic:
    ```

@@ -8,9 +8,9 @@ depending on the slider value.
 Steps:
 1. Install the Servo library from the Arduino Library Manager.
 2. In the Cayenne Dashboard add a new Custom Widget, and select Slider.
-3. Select a Virtual channel number.
+3. Select a Virtual pin number.
 4. Set min value to 0 and max value of 1.
-5. Set SERVO_VIRTUAL_PIN to the channel number you selected.
+5. Set SERVO_VIRTUAL_PIN to the pin number you selected.
 6. Connect the Servo's legs to GND, VCC (5.0), and a Digital pin.
 7. Set SERVO_DIGITAL_PIN to the pin number you selected.
 8. Set the token variable to match the Arduino token from the Dashboard.

@@ -8,8 +8,8 @@ Steps:
 2. Install the DallasTemperature library (http://milesburton.com/Main_Page?title=Dallas_Temperature_Control_Library#Code.2FLibrary) from the Arduino Library Manager.
 3. In the Cayenne Dashboard add a new DS18B20 widget.
 4. Set the widget to Value Display.
-5. Select Virtual Pins and a virtual channel number.
-6. Set VIRTUAL_CHANNEL to the channel number you selected.
+5. Select Virtual Pins and a virtual pin number.
+6. Set VIRTUAL_PIN to the pin number you selected.
 7. Attach a DS18B20 to an digital pin on your Arduino.
    Schematic:
    [Ground] -- [DS18B20] -- [4.7k resistor] -- [5V]
@@ -26,8 +26,8 @@ Steps:
 #include <DallasTemperature.h>
 #include <CayenneEthernet.h>
 
-// Virtual Channel of the DS18B20 widget.
-#define VIRTUAL_CHANNEL V1
+// Virtual Pin of the DS18B20 widget.
+#define VIRTUAL_PIN V1
 
 // Analog pin the DS18B20 is connected to.
 const int tmpPin = 0;
@@ -50,13 +50,13 @@ void loop()
 	Cayenne.run();
 }
 
-// This function is called when the Cayenne widget requests data for the Virtual Channel.
-CAYENNE_OUT(VIRTUAL_CHANNEL)
+// This function is called when the Cayenne widget requests data for the Virtual Pin.
+CAYENNE_OUT(VIRTUAL_PIN)
 {
 	// Send the command to get temperatures.
 	sensors.requestTemperatures();
-	// This command writes the temperature in Celsius to the Virtual Channel.
-	Cayenne.celsiusWrite(VIRTUAL_CHANNEL, sensors.getTempCByIndex(0));
+	// This command writes the temperature in Celsius to the Virtual Pin.
+	Cayenne.celsiusWrite(VIRTUAL_PIN, sensors.getTempCByIndex(0));
 	// To send the temperature in Fahrenheit use the corresponding code below.
-	//Cayenne.fahrenheitWrite(VIRTUAL_CHANNEL, sensors.getTempFByIndex(0));
+	//Cayenne.fahrenheitWrite(VIRTUAL_PIN, sensors.getTempFByIndex(0));
 }

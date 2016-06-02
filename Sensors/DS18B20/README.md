@@ -7,8 +7,8 @@ This sketch shows how to send temperature data to a DS18B20 Sensor in the Cayenn
 2. Install the DallasTemperature library (http://milesburton.com/Main_Page?title=Dallas_Temperature_Control_Library#Code.2FLibrary) from the Arduino Library Manager.
 3. In the Cayenne Dashboard add a new DS18B20 widget.
 4. Set the widget to Value Display.
-5. Select Virtual Pins and a virtual channel number.
-6. Set VIRTUAL_CHANNEL to the channel number you selected.
+5. Select Virtual Pins and a virtual pin number.
+6. Set VIRTUAL_PIN to the pin number you selected.
 7. Attach a DS18B20 to an digital pin on your Arduino.
    * Schematic:
    ```

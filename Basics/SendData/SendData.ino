@@ -2,10 +2,10 @@
 Cayenne SendData Example
 Adapted from Blynk's PushData Example
 
-This example sketch shows how a value can be sent from Arduino to the Cayenne Dashboard on a Virtual Channel.
+This example sketch shows how a value can be sent from Arduino to the Cayenne Dashboard on a Virtual Pin.
 
 Steps:
-1. Create a Generic Analog Input widget attached to Virtual Channel 5 in the Cayenne Dashboard.
+1. Create a Generic Analog Input widget attached to Virtual Pin 5 in the Cayenne Dashboard.
 2. Set the token variable to match the Arduino token from the Dashboard.
 3. Compile and upload the sketch.
 
@@ -25,7 +25,7 @@ char token[] = "AuthenticationToken";
 
 SimpleTimer timer;
 
-// This function sends Arduino's up time every second to Virtual Channel 5.
+// This function sends Arduino's up time every second to Virtual Pin 5.
 void sendUptime()
 {
 	// Send values using the virtualWrite function. Cayenne currently accepts int and float values.

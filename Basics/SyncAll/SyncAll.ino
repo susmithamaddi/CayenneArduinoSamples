@@ -6,8 +6,8 @@ This example sketch shows how the widgets in the Cayenne Dashboard can be synced
 successful connection occurs.
 
 Steps:
-1. Create a Generic Digital or Analog Output Actuator widget attached to Virtual Channel 6 in the Cayenne Dashboard.
-2. Create a Generic Digital or Analog Output Actuator widget attached to Virtual Channel 7 in the Cayenne Dashboard.
+1. Create a Generic Digital or Analog Output Actuator widget attached to Virtual Pin 6 in the Cayenne Dashboard.
+2. Create a Generic Digital or Analog Output Actuator widget attached to Virtual Pin 7 in the Cayenne Dashboard.
 3. Set the token variable to match the Arduino token from the Dashboard.
 4. Compile and upload the sketch.
 */
@@ -38,7 +38,7 @@ CAYENNE_CONNECTED()
 	CAYENNE_LOG("Connection established");
 	if (isFirstConnect)
 	{
-		// This causes Cayenne to resend data for any virtual channels.
+		// This causes Cayenne to resend data for any virtual pins.
 		Cayenne.syncAll();
 		isFirstConnect = false;
 	}
@@ -46,10 +46,10 @@ CAYENNE_CONNECTED()
 
 CAYENNE_IN(V6)
 {
-	CAYENNE_LOG("Current Virtual Channel 6 value: %s", getValue.asStr());
+	CAYENNE_LOG("Current Virtual Pin 6 value: %s", getValue.asStr());
 }
 
 CAYENNE_IN(V7)
 {
-	CAYENNE_LOG("Current Virtual Channel 7 value: %s", getValue.asStr());
+	CAYENNE_LOG("Current Virtual Pin 7 value: %s", getValue.asStr());
 }

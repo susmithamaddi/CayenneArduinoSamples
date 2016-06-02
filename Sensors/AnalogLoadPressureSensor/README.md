@@ -5,8 +5,8 @@ This sketch shows how to automatically send data to a Analog Load Pressure Senso
 ###### Steps:
 1. In the Cayenne Dashboard add a new Analog Load Pressure Sensor widget.
 2. Set the widget to Value Display.
-3. Select the Integrated ADC and a channel number.
-4. Attach an analog load pressure sensor to the analog pin on your Arduino matching the selected channel.
+3. Select the Integrated ADC and a pin number.
+4. Attach an analog load pressure sensor to the analog pin on your Arduino matching the selected pin.
    Make sure to use an analog pin, not a digital pin.
    * Schematic:
    ```
