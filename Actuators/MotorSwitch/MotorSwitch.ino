@@ -10,10 +10,10 @@ diode (eg. 1N4001), and a 270 ohm resistor.
 Steps:
 1. In the Cayenne Dashboard add a Button using Custom Widget.
 2. Select a virtual channel number.
-3. Set VIRTUAL_CHANNEL below to the channel number you selected.
+3. Set VIRTUAL_CHANNEL to the channel number you selected.
 4. Set up your motor schematic and attach it to a PWM pin.
-5. Set motorPin below to the PWM pin number you selected.
-6. Set the authentication token below to match the Arduino token from the Dashboard.
+5. Set the motorPin variable to the PWM pin number you selected.
+6. Set the token variable to match the Arduino token from the Dashboard.
 7. Compile and upload this sketch.
 8. Once the Arduino connects to the Dashboard you can toggle the Motor switch.
 

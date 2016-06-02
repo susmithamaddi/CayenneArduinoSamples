@@ -1,9 +1,8 @@
-/*
-Cayenne Light Switch Example
+# Cayenne Light Switch Example
 
 This sketch shows how to set up a Light Switch with Cayenne
 
-Steps:
+###### Steps:
 1. In the Cayenne Dashboard add a new Light Switch Widget.
 2. Select a GPIO pin number.
 3. Attach the positive leg of an LED to ground and the other leg to the selected digital pin.
@@ -15,21 +14,3 @@ Steps:
 
 Notice that there isn't much coding involved to interact with the digital pins.
 Most of it is handled automatically from the Cayenne library.
-*/
-
-#define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space
-#include <CayenneEthernet.h>
-
-// Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
-char token[] = "AuthenticationToken";
-
-void setup()
-{
-	Serial.begin(9600);
-	Cayenne.begin(token);
-}
-
-void loop()
-{
-	Cayenne.run();
-}

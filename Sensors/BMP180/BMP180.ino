@@ -9,8 +9,8 @@ Steps:
 3. In the Cayenne Dashboard add a new BMP180 widget.
 4. Set the widget to Value Display.
 5. Select Virtual Pins and select virtual channels for the barometer and temperature.
-6. Set BAROMETER_CHANNEL below to the channel number you selected for the barometer.
-7. Set TEMPERATURE_CHANNEL below to the channel number you selected for the temperature.
+6. Set BAROMETER_CHANNEL to the channel number you selected for the barometer.
+7. Set TEMPERATURE_CHANNEL to the channel number you selected for the temperature.
 8. Attach a BMP180 to your Arduino.
    Schematic:
    BMP180    Arduino
@@ -18,7 +18,7 @@ Steps:
    [GND] --- [GND]
    [SDA] --- [Analog Pin 4] (The SDA may be different on some devices, e.g. for Arduino Mega the SDA pin is Digital Pin 20)
    [SCL] --- [Analog Pin 5] (The SCL may be different on some devices, e.g. for Arduino Mega the SCL pin is Digital Pin 21)
-9. Set the authentication token below to match the Arduino token from the Dashboard.
+9. Set the token variable to match the Arduino token from the Dashboard.
 10. Compile and upload this sketch.
 11. Once the Arduino connects to the Dashboard it should automatically update the BMP180 widget with data.
 */

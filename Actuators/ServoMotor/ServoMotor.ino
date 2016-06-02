@@ -6,16 +6,16 @@ For this example we are going to use a slider widget and the servo will move
 depending on the slider value.
 
 Steps:
-1. In the Cayenne Dashboard add a new Custom Widget, and select Slider.
-2. Select a Virtual channel number.
-3. Set min value to 0 and max value of 1.
-4. Set SERVO_VIRTUAL_PIN below to the channel number you selected.
-5. Connect the Servo's legs to GND, VCC (5.0), and a Digital pin.
-6. Set SERVO_DIGITAL_PIN below to the pin number you selected.
-7. In the Arduino IDE, include the Servo Library.
-8. Set the authentication token below to match the Arduino token from the Dashboard.
+1. Install the Servo library from the Arduino Library Manager.
+2. In the Cayenne Dashboard add a new Custom Widget, and select Slider.
+3. Select a Virtual channel number.
+4. Set min value to 0 and max value of 1.
+5. Set SERVO_VIRTUAL_PIN to the channel number you selected.
+6. Connect the Servo's legs to GND, VCC (5.0), and a Digital pin.
+7. Set SERVO_DIGITAL_PIN to the pin number you selected.
+8. Set the token variable to match the Arduino token from the Dashboard.
 9. Compile and upload this sketch.
-10. Once the Arduino connects to the Dashboard you can use of the slider to change servo position.
+10. Once the Arduino connects to the Dashboard you can use the slider to change servo position.
 */
 
 #define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space

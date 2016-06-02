@@ -1,5 +1,4 @@
-/*
-Cayenne Valve Switch Example
+# Cayenne Valve Switch Example
 
 This sketch shows how to set up a Valve Switch with Cayenne. The Arduino cannot
 drive a valve because it does not output the needed current. As a result, in order
@@ -8,7 +7,7 @@ the valve. To keep it simple, you will need an external power source, transistor
 diode (eg. 1N4001), and a 1k ohm resistor. Alternatively you could also use a relay switch to 
 connect the valve.
 
-Steps:
+###### Steps:
 1. In the Cayenne Dashboard add a new Valve Switch Widget.
 2. Select a GPIO pin number.
 3. Set up your valve schematic and attach it to the selected pin.
@@ -18,21 +17,6 @@ Steps:
 
 Notice that there isn't much coding involved to interact with the digital pins.
 Most of it is handled automatically from the Cayenne library.
-*/
 
-#define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space
-#include <CayenneEthernet.h>
-
-// Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
-char token[] = "AuthenticationToken";
-
-void setup()
-{
-	Serial.begin(9600);
-	Cayenne.begin(token);
-}
-
-void loop()
-{
-	Cayenne.run();
-}
+## Example Schematic
+http://www.bc-robotics.com/wp-content/uploads/2015/07/sketch1-1024x919.jpg
