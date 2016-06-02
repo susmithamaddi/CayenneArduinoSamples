@@ -11,7 +11,7 @@ This sketch shows how to send temperature data to a Thermistor Sensor in the Cay
    * Schematic:
    ```
    [Ground] -- [10k-resistor] -- | -- [Thermistor] -- [5V]
-                                 |
+                                  |
                              Analog Pin
    ```
 6. Set the thermistorPin variable to match the pin used to connect the thermistor.
