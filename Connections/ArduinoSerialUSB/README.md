@@ -24,7 +24,7 @@ from the Arduino to the Cayenne server.
 ###### Linux and OSX:
     ./cayenne-ser.sh (may need to run with sudo)
     
-You can specify port, baud rate, and server endpoint like this:
+    You can specify port, baud rate, and server endpoint like this:
     ./cayenne-ser.sh -c <serial port> -b <baud rate> -s <server address> -p <server port>
 
     For instance :
