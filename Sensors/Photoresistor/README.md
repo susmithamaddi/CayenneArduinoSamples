@@ -11,7 +11,7 @@ This sketch shows how to automatically send data to a Photoresistor Sensor in th
    * Schematic:
    ```
    [Ground] -- [10k-resistor] -- | -- [Photoresistor] -- [5V]
-                                 |
+                                  |
                             Analog Pin
    ```
 5. Set the token variable to match the Arduino token from the Dashboard.
