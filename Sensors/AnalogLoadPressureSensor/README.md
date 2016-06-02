@@ -11,7 +11,7 @@ This sketch shows how to automatically send data to a Analog Load Pressure Senso
    * Schematic:
    ```
    [Ground -- [10k-resistor] -- | -- [Analog Load Pressure Sensor] -- [5V]
-                                |
+                                 |
                            Analog Pin
    ```
 5. Set the token variable to match the Arduino token from the Dashboard.
