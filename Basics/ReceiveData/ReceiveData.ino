@@ -27,7 +27,7 @@ void loop()
 	Cayenne.run();
 }
 
-// This function will be called every time a Dashboard widget writes a value to Virtual Channnel 4.
+// This function will be called every time a Dashboard widget writes a value to Virtual Pin 4.
 CAYENNE_IN(V4)
 {
 	CAYENNE_LOG("Got a value: %s", getValue.asStr());
