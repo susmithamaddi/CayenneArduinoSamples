@@ -29,8 +29,8 @@ Steps:
 // Virtual Pin of the DS18B20 widget.
 #define VIRTUAL_PIN V1
 
-// Analog pin the DS18B20 is connected to.
-const int tmpPin = 0;
+// Digital pin the DS18B20 is connected to.
+const int tmpPin = 2;
 
 OneWire oneWire(tmpPin);
 DallasTemperature sensors(&oneWire);
