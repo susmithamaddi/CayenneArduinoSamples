@@ -11,7 +11,7 @@ Steps:
 1. In the Cayenne Dashboard add a Button using Custom Widget.
 2. Select a virtual pin number.
 3. Set VIRTUAL_PIN to the pin number you selected.
-4. Set up your motor schematic and attach it to a PWM pin.
+4. Set up your motor schematic and attach it to a PWM pin (3, 5, 6, 9, 10, and 11 on most Arduino boards).
 5. Set the motorPin variable to the PWM pin number you selected.
 6. Set the token variable to match the Arduino token from the Dashboard.
 7. Compile and upload this sketch.
@@ -30,7 +30,7 @@ We use the virtual pin to receive data from the dashboard to enable and disable 
 char token[] = "AuthenticationToken";
 
 // motor pin
-int motorPin = 4;
+int motorPin = 3;
 
 void setup()
 {

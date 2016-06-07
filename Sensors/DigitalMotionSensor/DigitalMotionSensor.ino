@@ -29,7 +29,7 @@ char token[] = "AuthenticationToken";
 #define VIRTUAL_PIN V1
 
 // Digital pin the motion sensor is connected to.
-const int motionSensorPin = 0;
+const int motionSensorPin = 4;
 
 void setup()
 {
