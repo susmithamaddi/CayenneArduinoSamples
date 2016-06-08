@@ -5,7 +5,7 @@ This sketch shows how to set up a Slider Widget with Cayenne.
 ###### Steps:
 1. In the Cayenne Dashboard add a new Slider Custom Widget.
 2. Select a digital PWM pin number (3, 5, 6, 9, 10, and 11 on most Arduino boards).
-3. Attach an ouput device to the PWM pin on your Arduino matching the selected pin.
+3. Attach an output device to the PWM pin on your Arduino matching the selected pin.
 4. Set the token variable to match the Arduino token from the Dashboard.
 5. Compile and upload this sketch.
 6. Once the Arduino connects to the Dashboard you should be able to control the analog output device with the Slider widget.
