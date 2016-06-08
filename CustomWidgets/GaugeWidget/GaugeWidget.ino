@@ -17,11 +17,15 @@ Steps:
 For further examples of how to send data to Cayenne see the example sketches under Sensors.
 */
 
-#define CAYENNE_PRINT Serial  // Comment this out to disable prints and save space
-#include <CayenneEthernet.h>
+#define CAYENNE_PRINT Serial   // Comment this out to disable prints and save space
+#include <CayenneTemperature.h>
+#include <CayenneEthernet.h>   // Change this to use a different communication device. See Communications examples.
 
 // Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
 char token[] = "AuthenticationToken";
+
+// Virtual Pin of the Thermistor widget.
+#define VIRTUAL_PIN V1
 
 void setup()
 {
@@ -32,4 +36,14 @@ void setup()
 void loop()
 {
 	Cayenne.run();
+}
+
+// This function is called when the Cayenne widget requests data for the Virtual Pin.
+CAYENNE_OUT(VIRTUAL_PIN)
+{
+	// Read data from the sensor and send it to the virtual channel here.
+	// For example, this command writes a temperature in Celsius to the Virtual Pin.
+	Cayenne.celsiusWrite(VIRTUAL_PIN, 25.5);
+	// You can also write data using virtualWrite:
+	//Cayenne.virtualWrite(VIRTUAL_PIN, 25.5, CELSIUS, TEMPERATURE);
 }
