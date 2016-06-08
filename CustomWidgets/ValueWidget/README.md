@@ -10,7 +10,7 @@ This sketch shows how to set up a Value Widget with Cayenne.
 6. Attach an analog input device (e.g. a temperature sensor) to your Arduino.
 7. Set the token variable to match the Arduino token from the Dashboard.
 8. Modify the CAYENNE_OUT(VIRTUAL_PIN) function to send data from your sensor.
-8. Compile and upload this sketch.
-9. Once the Arduino connects to the Dashboard it should automatically update the Value widget with data.
+9. Compile and upload this sketch.
+10. Once the Arduino connects to the Dashboard it should automatically update the Value widget with data.
 
 For further examples of how to send data to Cayenne see the example sketches under Sensors.
