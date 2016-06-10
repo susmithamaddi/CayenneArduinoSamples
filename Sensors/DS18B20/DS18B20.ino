@@ -30,7 +30,7 @@ Steps:
 // Virtual Pin of the DS18B20 widget.
 #define VIRTUAL_PIN V1
 
-// Digital pin the DS18B20 is connected to.
+// Digital pin the DS18B20 is connected to. Do not use digital pins 0 or 1 since those conflict with the use of Serial.
 const int tmpPin = 2;
 
 OneWire oneWire(tmpPin);

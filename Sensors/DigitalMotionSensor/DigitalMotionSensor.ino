@@ -28,7 +28,7 @@ char token[] = "AuthenticationToken";
 // Virtual Pin of the Digital Motion Sensor widget.
 #define VIRTUAL_PIN V1
 
-// Digital pin the motion sensor is connected to.
+// Digital pin the motion sensor is connected to. Do not use digital pins 0 or 1 since those conflict with the use of Serial.
 const int motionSensorPin = 4;
 
 void setup()

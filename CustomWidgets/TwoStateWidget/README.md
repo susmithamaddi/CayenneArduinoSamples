@@ -4,7 +4,7 @@ This sketch shows how to set up a 2 State Widget with Cayenne.
 
 ###### Steps:
 1. In the Cayenne Dashboard add a new 2 State Custom Widget.
-2. Select a digital pin number.
+2. Select a digital pin number. Do not use digital pins 0 or 1 since those conflict with the use of Serial.
 3. Attach a digital input device (e.g. a button) to the digital pin on your Arduino matching the selected pin.
 4. Set the token variable to match the Arduino token from the Dashboard.
 5. Compile and upload this sketch.

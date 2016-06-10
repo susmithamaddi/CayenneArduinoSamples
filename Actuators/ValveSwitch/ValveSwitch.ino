@@ -10,7 +10,7 @@ connect the valve.
 
 Steps:
 1. In the Cayenne Dashboard add a new Valve Switch Widget.
-2. Select a GPIO pin number.
+2. Select a digital pin number. Do not use digital pins 0 or 1 since those conflict with the use of Serial.
 3. Set up your valve schematic and attach it to the selected pin.
 4. Set the token variable to match the Arduino token from the Dashboard.
 5. Compile and upload this sketch.

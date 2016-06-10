@@ -5,7 +5,7 @@ This sketch shows how to set up a Light Switch with Cayenne
 
 Steps:
 1. In the Cayenne Dashboard add a new Light Switch Widget.
-2. Select a GPIO pin number.
+2. Select a digital pin number. Do not use digital pins 0 or 1 since those conflict with the use of Serial.
 3. Attach the negative leg of an LED to ground and the other leg to the selected digital pin.
    Schematic:
    [Ground] -- [LED] -- [Resistor] -- [Digital Pin]

@@ -4,7 +4,7 @@ This sketch shows how to set up a Generic Digital Output with Cayenne.
 
 ###### Steps:
 1. In the Cayenne Dashboard add a new Generic Digital Output.
-2. Select a digital pin number.
+2. Select a digital pin number. Do not use digital pins 0 or 1 since those conflict with the use of Serial.
 3. Attach a digital output device to the digital pin on your Arduino matching the selected pin.
 4. Set the token variable to match the Arduino token from the Dashboard.
 5. Compile and upload this sketch.
