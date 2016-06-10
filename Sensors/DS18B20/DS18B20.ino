@@ -13,6 +13,7 @@ Steps:
 7. Attach a DS18B20 to an digital pin on your Arduino.
    Schematic:
    [Ground] -- [DS18B20] -- [4.7k resistor] -- [5V]
+                   |______________|
                    |
               Digital Pin
 8. Set the tmpPin variable to match the pin used to connect the DS18B20.
