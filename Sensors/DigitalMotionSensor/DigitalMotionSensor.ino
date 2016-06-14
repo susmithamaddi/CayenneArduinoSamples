@@ -3,6 +3,8 @@ Cayenne Digital Motion Sensor Example
 
 This sketch shows how to automatically send data to a Digital Motion Sensor in the Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new Digital Motion Sensor widget.
 2. Set the widget to 2-State Display.

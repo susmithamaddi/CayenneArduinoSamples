@@ -3,6 +3,8 @@ Cayenne BMP180 Example
 
 This sketch shows how to send luminosity data to a BMP180 Sensor in the Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. Install the Adafruit Unified Sensor library (https://github.com/adafruit/Adafruit_Sensor) from the Arduino Library Manager.
 2. Install the Adafruit BMP085 Unified library (https://github.com/adafruit/Adafruit_BMP085_Unified) from the Arduino Library Manager.

@@ -3,6 +3,8 @@ Cayenne Photoresistor Example
 
 This sketch shows how to automatically send data to a Photoresistor Sensor in the Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new Photoresistor widget.
 2. Set the widget to Value Display.

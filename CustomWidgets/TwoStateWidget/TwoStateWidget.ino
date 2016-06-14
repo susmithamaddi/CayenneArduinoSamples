@@ -3,6 +3,8 @@ Cayenne 2 State Widget Example
 
 This sketch shows how to set up a 2 State Widget with Cayenne.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new 2 State Custom Widget.
 2. Select a digital pin number. Do not use digital pins 0 or 1 since those conflict with the use of Serial.

@@ -3,6 +3,8 @@ Cayenne Value Widget Example
 
 This sketch shows how to set up a Value Widget with Cayenne.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new Value Custom Widget.
 3. Select Virtual I/O and a virtual pin number.

@@ -2,6 +2,8 @@
 
 This sketch sample file shows how to connect a Relay Switch.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 ###### Steps:
 1. In the Cayenne Dashboard add a new Custom Widget, and select Button.
 2. Select a Virtual pin number.

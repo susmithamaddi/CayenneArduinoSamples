@@ -3,6 +3,8 @@
 This sketch sample file shows how to change the brightness on a LED
 using Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 ###### Steps:
 1. In the Cayenne Dashboard add a new Custom Widget, and select Slider.
 2. Select a virtual pin number.

@@ -1,9 +1,10 @@
 /*
 Cayenne SyncAll Example
-Adapted from Blynk's Sync Example
 
 This example sketch shows how the widgets in the Cayenne Dashboard can be synced with the Arduino when a
 successful connection occurs.
+
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
 
 Steps:
 1. Create a Generic Digital or Analog Output Actuator widget attached to Virtual Pin 6 in the Cayenne Dashboard.

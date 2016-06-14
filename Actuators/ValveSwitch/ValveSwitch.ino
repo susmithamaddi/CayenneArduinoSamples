@@ -8,6 +8,8 @@ the valve. To keep it simple, you will need an external power source, transistor
 diode (eg. 1N4001), and a 1k ohm resistor. Alternatively you could also use a relay switch to 
 connect the valve.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new Valve Switch Widget.
 2. Select a digital pin number. Do not use digital pins 0 or 1 since those conflict with the use of Serial.

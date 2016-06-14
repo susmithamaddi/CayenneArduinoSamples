@@ -3,6 +3,8 @@ Cayenne Thermistor Example
 
 This sketch shows how to send temperature data to a Thermistor Sensor in the Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new Thermistor widget.
 2. Set the widget to Value Display.

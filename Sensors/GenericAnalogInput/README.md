@@ -2,6 +2,8 @@
 
 This sketch shows how to automatically send data to a Generic Analog Input Sensor in the Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 ###### Steps:
 1. In the Cayenne Dashboard add a new Generic Analog Input widget.
 2. Set the widget to Value Display.

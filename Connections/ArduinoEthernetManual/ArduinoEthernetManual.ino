@@ -1,9 +1,10 @@
 /*
 Cayenne Ethernet Manual IP Example
-Adapted from Blynk's Arduino_Ethernet_Manual Example
 
 This sketch connects to the Cayenne server using an Arduino Ethernet Shield W5100 and a 
 manually specified MAC address, IP and gateway.
+
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
 
 For Cayenne Dashboard widgets using digital or analog pins this sketch will automatically
 send data on those pins to the Cayenne server. If the widgets use Virtual Pins, data

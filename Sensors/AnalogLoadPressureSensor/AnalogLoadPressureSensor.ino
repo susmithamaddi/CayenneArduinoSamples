@@ -3,6 +3,8 @@ Cayenne Analog Load Pressure Sensor Example
 
 This sketch shows how to automatically send data to a Analog Load Pressure Sensor in the Cayenne Dashboard.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a new Analog Load Pressure Sensor widget.
 2. Set the widget to Value Display.

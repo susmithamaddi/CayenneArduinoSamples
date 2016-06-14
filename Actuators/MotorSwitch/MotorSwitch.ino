@@ -7,6 +7,8 @@ to make this example work, various electronic components are necessary to drive
 the DC motor. To keep it simple, you will need an external power source, transistor (eg. PN2222),
 diode (eg. 1N4001), and a 270 ohm resistor.
 
+The Cayenne Library is required to run this sketch. If you have not already done so you can install it from the Arduino IDE Library Manager.
+
 Steps:
 1. In the Cayenne Dashboard add a Button using Custom Widget.
 2. Select a virtual pin number.
