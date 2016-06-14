@@ -11,9 +11,8 @@ Steps:
 5. Set LUMINOSITY_PIN to the pin number you selected for the luminosity.
 6. Attach a VCNL4000 to your Arduino.
    Schematic:
-   VCNL4000    Arduino
+   VCNL4000      Arduino
    [VDD] ------- [3V3]
-   [IR Anode] -- [5V]
    [GND] ------- [GND]
    [SDA] ------- [Analog Pin 4] (The SDA may be different on some devices, e.g. for Arduino Mega the SDA pin is Digital Pin 20)
    [SCL] ------- [Analog Pin 5] (The SCL may be different on some devices, e.g. for Arduino Mega the SCL pin is Digital Pin 21)
