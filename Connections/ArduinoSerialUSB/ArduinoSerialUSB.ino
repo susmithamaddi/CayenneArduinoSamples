@@ -19,6 +19,11 @@ In order for this to work you must run the connection script on the machine the 
 The scripts are located under the extras\scripts folder in the main library folder. This redirects the traffic
 from the Arduino to the Cayenne server.
 
+Steps:
+1. Set the token variable to match the Arduino token from the Dashboard.
+2. Compile and upload this sketch.
+3. Launch the connection script as described below for Windows or Linux/OSX.
+
 Windows:
 	1. Open the Windows command line (cmd.exe)
 	2. Navigate to the scripts folder by typing "cd [path]", e.g.  "cd C:\Users\[YourUserName]\Documents\Arduino\libraries\Cayenne\extras\scripts"
@@ -43,7 +48,7 @@ ATTENTION!
 	not responding" or "Access is denied." You will need to terminate the connection script
 	before uploading new sketches since it blocks access to the Serial port. Also make sure 
 	the Serial Monitor is disabled in the IDE since that can prevent the Arduino from 
-	connecting to the Windows/Linux machine. If you use Visual Micro for Visual Studio make
+	connecting to the Windows/Linux/OSX machine. If you use Visual Micro for Visual Studio make
 	sure Automatic Debugging is disabled. Otherwise the Serial Monitor can interfere with the
 	Serial connection.
 */
