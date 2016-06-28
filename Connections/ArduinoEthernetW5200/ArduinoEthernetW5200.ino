@@ -1,4 +1,4 @@
-*
+/*
 Cayenne Ethernet W5200 Example
 
 This sketch connects to the Cayenne server using an Arduino Ethernet Shield W5200
