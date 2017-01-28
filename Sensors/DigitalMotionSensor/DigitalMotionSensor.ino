@@ -27,7 +27,7 @@ Steps:
 #include <CayenneEthernet.h>
 
 // Cayenne authentication token. This should be obtained from the Cayenne Dashboard.
-char token[] = "AuthenticationToken";
+char token[] = "f99kcpfur5";
 
 // Virtual Pin of the Digital Motion Sensor widget.
 #define VIRTUAL_PIN V1
@@ -55,7 +55,7 @@ void checkSensor()
 {
 	unsigned long currentMillis = millis();
 	// Check sensor data every 250 milliseconds
-	if (currentMillis - previousMillis >= 250) {
+	if (currentMillis - previousMillis >= 100) {
 		// Check the sensor state and send data when it changes.
 		currentState = digitalRead(motionSensorPin);
 		if (currentState != previousState) {
